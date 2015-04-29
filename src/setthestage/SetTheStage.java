@@ -29,7 +29,7 @@ public class SetTheStage extends Application {
         Label update = new Label();
         update.setText("Click Count: " + num);
         
-         scene.getStylesheets().add(SetTheStage.class.getResource("stage.css").toExternalForm());
+        scene.getStylesheets().add(SetTheStage.class.getResource("stage.css").toExternalForm());
  
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
