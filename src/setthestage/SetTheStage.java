@@ -22,6 +22,8 @@ import javafx.stage.StageStyle;
 public class SetTheStage extends Application {
     
     private int num;
+    private final BorderPane root = new BorderPane();
+    private final Scene scene = new Scene(root, 900, 250);
     
     @Override
     public void start(Stage primaryStage) {
@@ -30,6 +32,8 @@ public class SetTheStage extends Application {
         
         Label update = new Label();
         update.setText("Click Count: " + num);
+        
+         scene.getStylesheets().add(SetTheStage.class.getResource("stage.css").toExternalForm());
         
         
         
@@ -42,20 +46,16 @@ public class SetTheStage extends Application {
             }
         });
         
-        BorderPane root = new BorderPane();
+      
         root.setBottom(btn);
         root.setCenter(update);
-        
-        Scene scene = new Scene(root, 900, 250);
-       
-        
+    
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.UTILITY);  // This method changes the window border style
         primaryStage.setOpacity(0.6);
         primaryStage.show();
-         
-        
+       
     }
 
     /**
