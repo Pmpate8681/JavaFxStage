@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package setthestage;
 
 import javafx.application.Application;
@@ -34,9 +30,7 @@ public class SetTheStage extends Application {
         update.setText("Click Count: " + num);
         
          scene.getStylesheets().add(SetTheStage.class.getResource("stage.css").toExternalForm());
-        
-        
-        
+ 
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
